@@ -70,15 +70,15 @@ public class LauncherSettingsPage extends DecoratorAnimatedPage implements Decor
 
         AdvancedListBox sideBar = new AdvancedListBox()
                 .addNavigationDrawerTab(tab, gameTab, i18n("settings.type.global.manage"), SVG.GAMEPAD)
-                .addNavigationDrawerTab(tab, javaManagementTab, i18n("java.management"), SVG.WRENCH_OUTLINE)
-                .startCategory(i18n("launcher").toUpperCase(Locale.ROOT))
-                .addNavigationDrawerTab(tab, settingsTab, i18n("settings.launcher.general"), SVG.APPLICATION_OUTLINE)
-                .addNavigationDrawerTab(tab, personalizationTab, i18n("settings.launcher.appearance"), SVG.STYLE_OUTLINE)
-                .addNavigationDrawerTab(tab, downloadTab, i18n("download"), SVG.DOWNLOAD_OUTLINE)
-                .startCategory(i18n("help").toUpperCase(Locale.ROOT))
-                .addNavigationDrawerTab(tab, helpTab, i18n("help"), SVG.HELP_CIRCLE_OUTLINE)
-                .addNavigationDrawerTab(tab, feedbackTab, i18n("feedback"), SVG.MESSAGE_ALERT_OUTLINE)
-                .addNavigationDrawerTab(tab, aboutTab, i18n("about"), SVG.INFORMATION_OUTLINE);
+                .addNavigationDrawerTab(tab, javaManagementTab, i18n("java.management"), SVG.WRENCH_OUTLINE);
+                //.startCategory(i18n("launcher").toUpperCase(Locale.ROOT))
+                //.addNavigationDrawerTab(tab, settingsTab, i18n("settings.launcher.general"), SVG.APPLICATION_OUTLINE)
+                //.addNavigationDrawerTab(tab, personalizationTab, i18n("settings.launcher.appearance"), SVG.STYLE_OUTLINE)
+                //.addNavigationDrawerTab(tab, downloadTab, i18n("download"), SVG.DOWNLOAD_OUTLINE)
+                //.startCategory(i18n("help").toUpperCase(Locale.ROOT))
+                //.addNavigationDrawerTab(tab, helpTab, i18n("help"), SVG.HELP_CIRCLE_OUTLINE)
+                //.addNavigationDrawerTab(tab, feedbackTab, i18n("feedback"), SVG.MESSAGE_ALERT_OUTLINE)
+                //.addNavigationDrawerTab(tab, aboutTab, i18n("about"), SVG.INFORMATION_OUTLINE);
         FXUtils.setLimitWidth(sideBar, 200);
         setLeft(sideBar);
 

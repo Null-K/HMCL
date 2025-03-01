@@ -31,15 +31,16 @@ public final class Metadata {
     private Metadata() {}
 
     public static final String NAME = "HMCL";
-    public static final String FULL_NAME = "Hello Minecraft! Launcher";
+    public static final String FULL_NAME = "TerryPhil Launcher";
     public static final String VERSION = System.getProperty("hmcl.version.override", JarUtils.getManifestAttribute("Implementation-Version", "@develop@"));
 
     public static final String TITLE = NAME + " " + VERSION;
-    public static final String FULL_TITLE = FULL_NAME + " v" + VERSION;
+    //public static final String FULL_TITLE = FULL_NAME + " v" + VERSION;
+    public static final String FULL_TITLE = FULL_NAME;
 
     public static final String HMCL_UPDATE_URL = System.getProperty("hmcl.update_source.override", "https://hmcl.huangyuhui.net/api/update_link");
-    public static final String CONTACT_URL = "https://docs.hmcl.net/help.html";
-    public static final String HELP_URL = "https://docs.hmcl.net";
+    public static final String CONTACT_URL = "https://qm.qq.com/cgi-bin/qm/qr?k=sNSGJAQzmvYxlXDcZBPVGG7P9WMZ6DPw&jump_from=webapi&authKey=Ykc7zYS/zk+lshsyBTP1quOySM4OHmTaxMDGGfgb69Tp1WSf1pROiTXzVWDKT5Xc";
+    public static final String HELP_URL = "https://qm.qq.com/cgi-bin/qm/qr?k=sNSGJAQzmvYxlXDcZBPVGG7P9WMZ6DPw&jump_from=webapi&authKey=Ykc7zYS/zk+lshsyBTP1quOySM4OHmTaxMDGGfgb69Tp1WSf1pROiTXzVWDKT5Xc";
     public static final String CHANGELOG_URL = "https://docs.hmcl.net/changelog/";
     public static final String PUBLISH_URL = "https://hmcl.huangyuhui.net";
     public static final String EULA_URL = "https://docs.hmcl.net/eula/hmcl.html";
@@ -77,6 +78,7 @@ public final class Metadata {
     }
 
     public static boolean isNightly() {
-        return !isStable() && !isDev();
+        //return !isStable() && !isDev();
+        return false;
     }
 }

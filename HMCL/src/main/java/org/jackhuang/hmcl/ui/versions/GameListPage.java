@@ -69,12 +69,12 @@ public class GameListPage extends DecoratorAnimatedPage implements DecoratorPage
             ScrollPane pane = new ScrollPane();
             VBox.setVgrow(pane, Priority.ALWAYS);
             {
-                AdvancedListItem addProfileItem = new AdvancedListItem();
-                addProfileItem.getStyleClass().add("navigation-drawer-item");
-                addProfileItem.setTitle(i18n("profile.new"));
-                addProfileItem.setActionButtonVisible(false);
-                addProfileItem.setLeftGraphic(VersionPage.wrap(SVG.PLUS_CIRCLE_OUTLINE));
-                addProfileItem.setOnAction(e -> Controllers.navigate(new ProfilePage(null)));
+                //AdvancedListItem addProfileItem = new AdvancedListItem();
+                //addProfileItem.getStyleClass().add("navigation-drawer-item");
+                //addProfileItem.setTitle(i18n("profile.new"));
+                //addProfileItem.setActionButtonVisible(false);
+                //addProfileItem.setLeftGraphic(VersionPage.wrap(SVG.PLUS_CIRCLE_OUTLINE));
+                //addProfileItem.setOnAction(e -> Controllers.navigate(new ProfilePage(null)));
 
                 pane.setFitToWidth(true);
                 VBox wrapper = new VBox();
@@ -82,16 +82,16 @@ public class GameListPage extends DecoratorAnimatedPage implements DecoratorPage
                 VBox box = new VBox();
                 box.setFillWidth(true);
                 Bindings.bindContent(box.getChildren(), profileListItems);
-                wrapper.getChildren().setAll(box, addProfileItem);
+                wrapper.getChildren().setAll(box);
                 pane.setContent(wrapper);
             }
 
             AdvancedListBox bottomLeftCornerList = new AdvancedListBox()
-                    .addNavigationDrawerItem(i18n("install.new_game"), SVG.PLUS_CIRCLE_OUTLINE, Versions::addNewGame)
-                    .addNavigationDrawerItem(i18n("install.modpack"), SVG.PACK, Versions::importModpack)
+                    //.addNavigationDrawerItem(i18n("install.new_game"), SVG.PLUS_CIRCLE_OUTLINE, Versions::addNewGame)
+                    //.addNavigationDrawerItem(i18n("install.modpack"), SVG.PACK, Versions::importModpack)
                     .addNavigationDrawerItem(i18n("button.refresh"), SVG.REFRESH, gameList::refreshList)
                     .addNavigationDrawerItem(i18n("settings.type.global.manage"), SVG.GEAR_OUTLINE, this::modifyGlobalGameSettings);
-            FXUtils.setLimitHeight(bottomLeftCornerList, 40 * 4 + 12 * 2);
+            FXUtils.setLimitHeight(bottomLeftCornerList, 40 * 2 + 12 * 2);
             setLeft(pane, bottomLeftCornerList);
         }
 

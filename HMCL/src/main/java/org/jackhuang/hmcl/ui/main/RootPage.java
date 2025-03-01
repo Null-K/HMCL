@@ -160,12 +160,12 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
             gameItem.setOnAction(e -> Controllers.navigate(Controllers.getGameListPage()));
 
             // forth item in left sidebar
-            AdvancedListItem downloadItem = new AdvancedListItem();
-            downloadItem.setLeftGraphic(wrap(SVG.DOWNLOAD_OUTLINE));
-            downloadItem.setActionButtonVisible(false);
-            downloadItem.setTitle(i18n("download"));
-            downloadItem.setOnAction(e -> Controllers.navigate(Controllers.getDownloadPage()));
-            FXUtils.installFastTooltip(downloadItem, i18n("download.hint"));
+            //AdvancedListItem downloadItem = new AdvancedListItem();
+            //downloadItem.setLeftGraphic(wrap(SVG.DOWNLOAD_OUTLINE));
+            //downloadItem.setActionButtonVisible(false);
+            //downloadItem.setTitle(i18n("download"));
+            //downloadItem.setOnAction(e -> Controllers.navigate(Controllers.getDownloadPage()));
+            //FXUtils.installFastTooltip(downloadItem, i18n("download.hint"));
 
             // fifth item in left sidebar
             AdvancedListItem launcherSettingsItem = new AdvancedListItem();
@@ -175,11 +175,11 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
             launcherSettingsItem.setOnAction(e -> Controllers.navigate(Controllers.getSettingsPage()));
 
             // sixth item in left sidebar
-            AdvancedListItem chatItem = new AdvancedListItem();
-            chatItem.setLeftGraphic(wrap(SVG.CHAT));
-            chatItem.setActionButtonVisible(false);
-            chatItem.setTitle(i18n("chat"));
-            chatItem.setOnAction(e -> FXUtils.openLink("https://docs.hmcl.net/groups.html"));
+            //AdvancedListItem chatItem = new AdvancedListItem();
+            //chatItem.setLeftGraphic(wrap(SVG.CHAT));
+            //chatItem.setActionButtonVisible(false);
+            //chatItem.setTitle(i18n("chat"));
+            //chatItem.setOnAction(e -> FXUtils.openLink("https://qm.qq.com/cgi-bin/qm/qr?k=sNSGJAQzmvYxlXDcZBPVGG7P9WMZ6DPw&jump_from=webapi&authKey=Ykc7zYS/zk+lshsyBTP1quOySM4OHmTaxMDGGfgb69Tp1WSf1pROiTXzVWDKT5Xc"));
 
             // the left sidebar
             AdvancedListBox sideBar = new AdvancedListBox()
@@ -188,10 +188,10 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
                     .startCategory(i18n("version").toUpperCase(Locale.ROOT))
                     .add(gameListItem)
                     .add(gameItem)
-                    .add(downloadItem)
+                    //.add(downloadItem)
                     .startCategory(i18n("settings.launcher.general").toUpperCase(Locale.ROOT))
                     .add(launcherSettingsItem)
-                    .add(chatItem)
+                    //.add(chatItem)
                     ;
 
             // the root page, with the sidebar in left, navigator in center.

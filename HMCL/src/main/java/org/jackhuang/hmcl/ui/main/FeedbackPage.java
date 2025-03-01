@@ -47,19 +47,13 @@ public class FeedbackPage extends SpinnerPane {
             users.setSubtitle(i18n("feedback.qq_group.statement"));
             users.setExternalLink("https://docs.hmcl.net/groups.html");
 
-            IconedTwoLineListItem github = new IconedTwoLineListItem();
-            github.setImage(FXUtils.newBuiltinImage("/assets/img/github.png"));
-            github.setTitle(i18n("feedback.github"));
-            github.setSubtitle(i18n("feedback.github.statement"));
-            github.setExternalLink("https://github.com/HMCL-dev/HMCL/issues/new/choose");
+            IconedTwoLineListItem server = new IconedTwoLineListItem();
+            server.setImage(FXUtils.newBuiltinImage("/assets/img/icon.png"));
+            server.setTitle("TerryPhil 官方群");
+            server.setSubtitle("如果遇到任何问题，欢迎加入官方群进行反馈");
+            server.setExternalLink("https://qm.qq.com/cgi-bin/qm/qr?k=sNSGJAQzmvYxlXDcZBPVGG7P9WMZ6DPw&jump_from=webapi&authKey=Ykc7zYS/zk+lshsyBTP1quOySM4OHmTaxMDGGfgb69Tp1WSf1pROiTXzVWDKT5Xc");
 
-            IconedTwoLineListItem discord = new IconedTwoLineListItem();
-            discord.setImage(FXUtils.newBuiltinImage("/assets/img/discord.png"));
-            discord.setTitle(i18n("feedback.discord"));
-            discord.setSubtitle(i18n("feedback.discord.statement"));
-            discord.setExternalLink("https://discord.gg/jVvC7HfM6U");
-
-            community.getContent().setAll(users, github, discord);
+            community.getContent().setAll(users, server);
         }
 
         content.getChildren().addAll(

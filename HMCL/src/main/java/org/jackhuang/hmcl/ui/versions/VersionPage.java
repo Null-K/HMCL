@@ -246,35 +246,35 @@ public class VersionPage extends DecoratorAnimatedPage implements DecoratorPage 
                 versionSettingsItem.activeProperty().bind(control.tab.getSelectionModel().selectedItemProperty().isEqualTo(control.versionSettingsTab));
                 versionSettingsItem.setOnAction(e -> control.tab.select(control.versionSettingsTab));
 
-                AdvancedListItem installerListItem = new AdvancedListItem();
-                installerListItem.getStyleClass().add("navigation-drawer-item");
-                installerListItem.setTitle(i18n("settings.tabs.installers"));
-                installerListItem.setLeftGraphic(wrap(SVG.CUBE));
-                installerListItem.setActionButtonVisible(false);
-                installerListItem.activeProperty().bind(control.tab.getSelectionModel().selectedItemProperty().isEqualTo(control.installerListTab));
-                installerListItem.setOnAction(e -> control.tab.select(control.installerListTab));
+                //AdvancedListItem installerListItem = new AdvancedListItem();
+                //installerListItem.getStyleClass().add("navigation-drawer-item");
+                //installerListItem.setTitle(i18n("settings.tabs.installers"));
+                //installerListItem.setLeftGraphic(wrap(SVG.CUBE));
+                //installerListItem.setActionButtonVisible(false);
+                //installerListItem.activeProperty().bind(control.tab.getSelectionModel().selectedItemProperty().isEqualTo(control.installerListTab));
+                //installerListItem.setOnAction(e -> control.tab.select(control.installerListTab));
 
-                AdvancedListItem modListItem = new AdvancedListItem();
-                modListItem.getStyleClass().add("navigation-drawer-item");
-                modListItem.setTitle(i18n("mods.manage"));
-                modListItem.setLeftGraphic(wrap(SVG.PUZZLE));
-                modListItem.setActionButtonVisible(false);
-                modListItem.activeProperty().bind(control.tab.getSelectionModel().selectedItemProperty().isEqualTo(control.modListTab));
-                modListItem.setOnAction(e -> control.tab.select(control.modListTab));
+                //AdvancedListItem modListItem = new AdvancedListItem();
+                //modListItem.getStyleClass().add("navigation-drawer-item");
+                //modListItem.setTitle(i18n("mods.manage"));
+                //modListItem.setLeftGraphic(wrap(SVG.PUZZLE));
+                //modListItem.setActionButtonVisible(false);
+                //modListItem.activeProperty().bind(control.tab.getSelectionModel().selectedItemProperty().isEqualTo(control.modListTab));
+                //modListItem.setOnAction(e -> control.tab.select(control.modListTab));
 
-                AdvancedListItem worldListItem = new AdvancedListItem();
-                worldListItem.getStyleClass().add("navigation-drawer-item");
-                worldListItem.setTitle(i18n("world.manage"));
-                worldListItem.setLeftGraphic(wrap(SVG.EARTH));
-                worldListItem.setActionButtonVisible(false);
-                worldListItem.activeProperty().bind(control.tab.getSelectionModel().selectedItemProperty().isEqualTo(control.worldListTab));
-                worldListItem.setOnAction(e -> control.tab.select(control.worldListTab));
+                //AdvancedListItem worldListItem = new AdvancedListItem();
+                //worldListItem.getStyleClass().add("navigation-drawer-item");
+                //worldListItem.setTitle(i18n("world.manage"));
+                //worldListItem.setLeftGraphic(wrap(SVG.EARTH));
+                //worldListItem.setActionButtonVisible(false);
+                //worldListItem.activeProperty().bind(control.tab.getSelectionModel().selectedItemProperty().isEqualTo(control.worldListTab));
+                //worldListItem.setOnAction(e -> control.tab.select(control.worldListTab));
 
                 AdvancedListBox sideBar = new AdvancedListBox()
-                        .add(versionSettingsItem)
-                        .add(installerListItem)
-                        .add(modListItem)
-                        .add(worldListItem);
+                        .add(versionSettingsItem);
+                        //.add(installerListItem)
+                        //.add(modListItem)
+                        //.add(worldListItem);
                 VBox.setVgrow(sideBar, Priority.ALWAYS);
 
                 PopupMenu browseList = new PopupMenu();
@@ -321,7 +321,8 @@ public class VersionPage extends DecoratorAnimatedPage implements DecoratorPage 
                 toolbar.getStyleClass().add("advanced-list-box-clear-padding");
                 FXUtils.setLimitHeight(toolbar, 40 * 4 + 12 * 2);
 
-                setLeft(sideBar, toolbar);
+                //setLeft(sideBar, toolbar);
+                setLeft(sideBar);
             }
 
             control.state.bind(Bindings.createObjectBinding(() ->
